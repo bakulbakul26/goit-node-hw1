@@ -14,10 +14,6 @@ function listContacts() {
     });
 }
 
-/**
- * Funkcja do pobierania kontaktu po ID
- * @param {string} contactId - ID kontaktu
- */
 function getContactById(contactId) {
     fs.readFile(contactsPath, "utf-8", (err, data) => {
         if (err) {
@@ -30,10 +26,6 @@ function getContactById(contactId) {
     });
 }
 
-/**
- * Funkcja do usuwania kontaktu po ID
- * @param {string} contactId - ID kontaktu
- */
 function removeContact(contactId) {
     fs.readFile(contactsPath, "utf-8", (err, data) => {
         if (err) {
@@ -50,12 +42,6 @@ function removeContact(contactId) {
     });
 }
 
-/**
- * Funkcja do dodawania nowego kontaktu
- * @param {string} name - Nazwa kontaktu
- * @param {string} email - Email kontaktu
- * @param {string} phone - Telefon kontaktu
- */
 function addContact(name, email, phone) {
     fs.readFile(contactsPath, "utf-8", (err, data) => {
         if (err) {
